@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AnyChat Docs</title>
+  <meta name="description" content="AnyChat documentation: user guides and developer guides for the Free, Pro and Enterprise plans." />
+  <link rel="icon" href="../assets/img/logo.png" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="docs.css" />
+</head>
+<body>
+
+  <!-- 阅读进度条 -->
+  <div class="doc-progress" id="docProgress" aria-hidden="true"></div>
+
+  <header class="nav docs-nav" id="nav">
+    <div class="container nav-inner">
+      <div class="nav-left">
+        <button class="docs-menu-toggle" id="docsMenuToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <a class="brand" href="../index.html">
+          <img src="../assets/img/logo.png" alt="AnyChat" class="brand-logo" />
+          <span class="brand-name">AnyChat</span>
+          <span class="docs-tag" data-i18n="doc.docs">Docs</span>
+        </a>
+      </div>
+      <div class="nav-actions">
+        <label class="lang-picker">
+          <span class="sr-only" data-i18n="lang.label">Language</span>
+          <select id="langSelect" aria-label="Language"></select>
+        </label>
+        <a href="../index.html" class="btn btn-ghost" data-i18n="doc.back">Back to site</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="docs-shell">
+    <aside class="docs-side" id="docsSide">
+      <div class="docs-search">
+        <span class="docs-search-icon" aria-hidden="true">⌕</span>
+        <input id="docSearch" type="search" autocomplete="off"
+               data-i18n-attr="placeholder|doc.search" placeholder="Search docs…" />
+      </div>
+      <p class="docs-side-title" data-i18n="doc.versions">Browse by plan</p>
+      <nav id="docsMenu" class="docs-menu"></nav>
+    </aside>
+
+    <main class="docs-main">
+      <nav class="doc-crumb" id="docCrumb" aria-label="breadcrumb"></nav>
+      <article id="docBody" class="doc-body"></article>
+      <nav class="doc-pager" id="docPager"></nav>
+      <p class="doc-updated">
+        <span data-i18n="doc.updated">Last updated</span>:
+        <span data-i18n="doc.updatedAt">2026-09-08</span>
+      </p>
+    </main>
+
+    <aside class="docs-toc">
+      <p class="docs-toc-title" data-i18n="doc.toc">On this page</p>
+      <div id="docToc" class="docs-toc-list"></div>
+    </aside>
+  </div>
+
+  <button class="doc-totop" id="toTop" aria-label="Top">↑</button>
+
+  <script src="../assets/js/i18n.js"></script>
+  <script src="content.zh-CN.js"></script>
+  <script src="content.zh-TW.js"></script>
+  <script src="content.en.js"></script>
+  <script src="content.es.js"></script>
+  <script src="docs.js"></script>
+</body>
+</html>

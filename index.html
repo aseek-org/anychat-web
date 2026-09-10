@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="meta.title">AnyChat — WeChat-style Real-time Messaging · Self-hosted IM Solution</title>
+  <meta name="description" data-i18n-attr="content|meta.desc" content="AnyChat is a fully decoupled WeChat-style messaging system: real-time chat, WebRTC audio/video calls, Flutter apps for every platform, admin console, self-hosted with full data ownership." />
+  <link rel="icon" href="assets/img/logo.png" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ======================= 导航 ======================= -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top">
+        <img src="assets/img/logo.png" alt="AnyChat" class="brand-logo" />
+        <span class="brand-name">AnyChat</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#features" data-i18n="nav.features">Features</a>
+        <a href="#screens" data-i18n="nav.screens">Highlights</a>
+        <a href="#architecture" data-i18n="nav.arch">Architecture</a>
+        <a href="#download" data-i18n="nav.download">Download</a>
+        <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
+        <a href="docs/index.html" data-i18n="nav.docs">Docs</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="chat/" data-i18n="nav.login">Sign in</a>
+        <a href="admin/" data-i18n="nav.admin">Admin</a>
+      </nav>
+      <div class="nav-actions">
+        <label class="lang-picker">
+          <span class="sr-only" data-i18n="lang.label">Language</span>
+          <select id="langSelect" aria-label="Language"></select>
+        </label>
+        <a href="#pricing" class="btn btn-ghost" data-i18n="nav.consult">Talk to sales</a>
+        <a href="#download" class="btn btn-primary" data-i18n="nav.cta">Get it free</a>
+        <button class="nav-toggle" id="navToggle" aria-label="menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================= Hero ======================= -->
+  <section class="hero" id="top">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div class="hero-copy reveal">
+        <span class="hero-badge" data-i18n="hero.badge">Self-hosted · Full data ownership · Pay with USDT</span>
+        <h1>
+          <span data-i18n="hero.titleA">One codebase,</span>
+          <em class="grad" data-i18n="hero.titleB">your own messenger</em>
+        </h1>
+        <p class="hero-sub" data-i18n="hero.sub">AnyChat is a fully decoupled WeChat-style messaging system: 1:1 and group chat, audio/video calls, discovery feed, mini-app container and an admin console. Delivered as a compiled build or full source, deployed on your own servers.</p>
+        <div class="hero-cta">
+          <a href="#download" class="btn btn-primary btn-lg" data-i18n="hero.cta1">Try it now</a>
+          <a href="#architecture" class="btn btn-outline btn-lg" data-i18n="hero.cta2">See architecture</a>
+        </div>
+        <ul class="hero-points">
+          <li data-i18n="hero.p1">✓ Every platform</li>
+          <li data-i18n="hero.p2">✓ Build or source delivery</li>
+          <li data-i18n="hero.p3">✓ USDT accepted</li>
+        </ul>
+      </div>
+      <div class="hero-art reveal">
+        <img src="assets/img/hero.png" alt="AnyChat" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 数据条 ======================= -->
+  <section class="stats">
+    <div class="container stats-grid">
+      <div class="stat reveal"><strong>5+</strong><span data-i18n="stats.1">Client platforms</span></div>
+      <div class="stat reveal"><strong>&lt;100ms</strong><span data-i18n="stats.2">Message delivery</span></div>
+      <div class="stat reveal"><strong>100%</strong><span data-i18n="stats.3">Data ownership</span></div>
+      <div class="stat reveal"><strong data-i18n="stats.4v">USDT</strong><span data-i18n="stats.4">Payment</span></div>
+    </div>
+  </section>
+
+  <!-- ======================= 功能 ======================= -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="sec.feat.eyebrow">Features</span>
+        <h2 data-i18n="sec.feat.title">Everything your users expect</h2>
+        <p data-i18n="sec.feat.sub">From messaging to calls, from a content feed to an admin console — ready out of the box.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card reveal">
+          <div class="feature-icon">💬</div>
+          <h3 data-i18n="f1.t">1:1 &amp; Group Chat</h3>
+          <p data-i18n="f1.d">Real-time messaging over SignalR WebSocket with presence, unread counts, message banners and notification sounds.</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-icon">📹</div>
+          <h3 data-i18n="f2.t">Audio &amp; Video Calls</h3>
+          <p data-i18n="f2.d">Peer-to-peer WebRTC voice and video calls with ringtone alerts and custom STUN / TURN configuration.</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-icon">👥</div>
+          <h3 data-i18n="f3.t">Contacts &amp; Friends</h3>
+          <p data-i18n="f3.d">Search and add friends, QR business cards, friend request management and grouped contacts.</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-icon">🧭</div>
+          <h3 data-i18n="f4.t">Discovery &amp; Channels</h3>
+          <p data-i18n="f4.d">A WeChat-moments style discovery feed; channel content is managed entirely from the admin console.</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-icon">🧩</div>
+          <h3 data-i18n="f5.t">Mini-app Container</h3>
+          <p data-i18n="f5.d">A built-in WebView mini-app container with a JS Bridge, so any business H5 plugs straight in.</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-icon">🗂️</div>
+          <h3 data-i18n="f6.t">Images, Files &amp; Voice</h3>
+          <p data-i18n="f6.d">Inline image previews, file transfer and voice messages with in-app recording and playback.</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-icon">🛡️</div>
+          <h3 data-i18n="f7.t">Admin Console</h3>
+          <p data-i18n="f7.d">Users, roles and permissions, audit logs, feature toggles and content channels in a dedicated admin app.</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-icon">📱</div>
+          <h3 data-i18n="f8.t">Every Platform</h3>
+          <p data-i18n="f8.d">One Flutter codebase shipped to Web, Android, iOS, Windows and macOS with a consistent experience.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 亮点 ======================= -->
+  <section class="section section-alt" id="screens">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="sec.scr.eyebrow">Highlights</span>
+        <h2 data-i18n="sec.scr.title">More than chat — a complete platform</h2>
+      </div>
+      <div class="split">
+        <div class="split-copy reveal">
+          <h3 data-i18n="s1.t">Scan, QR codes &amp; config links</h3>
+          <p data-i18n="s1.d">Built-in QR scanner and generator, plus one-tap "config link" import of your server address. Share a link and users are ready in seconds.</p>
+          <ul class="check-list">
+            <li data-i18n="s1.l1">Add friends by QR code</li>
+            <li data-i18n="s1.l2">Server config distribution</li>
+            <li data-i18n="s1.l3">In-app updates &amp; download page</li>
+          </ul>
+        </div>
+        <div class="split-art reveal">
+          <img src="assets/img/hero.png" alt="AnyChat" loading="lazy" />
+        </div>
+      </div>
+      <div class="split split-reverse">
+        <div class="split-copy reveal">
+          <h3 data-i18n="s2.t">Real-time and reliable</h3>
+          <p data-i18n="s2.d">Persistent SignalR connections with auto-reconnect, message de-duplication by ID and no lost messages on weak networks. JWT secures both REST and Hub.</p>
+          <ul class="check-list">
+            <li data-i18n="s2.l1">WebSocket push in milliseconds</li>
+            <li data-i18n="s2.l2">Offline messages &amp; unread sync</li>
+            <li data-i18n="s2.l3">Full REST + Hub protocol docs</li>
+          </ul>
+        </div>
+        <div class="split-art reveal">
+          <img src="assets/img/hero.png" alt="AnyChat" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 架构 ======================= -->
+  <section class="section" id="architecture">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="sec.arch.eyebrow">Architecture</span>
+        <h2 data-i18n="sec.arch.title">A stack your engineers already know</h2>
+        <p data-i18n="sec.arch.sub">Frontend and backend are fully decoupled — every layer can be extended or replaced.</p>
+      </div>
+      <div class="arch-grid">
+        <div class="arch-card reveal">
+          <span class="arch-tag" data-i18n="arch.server">Backend</span>
+          <h3 data-i18n="arch.server.t">ASP.NET Core 10</h3>
+          <p data-i18n="arch.server.d">REST API plus a SignalR Hub over WebSocket, JWT auth, PostgreSQL storage, health checks and per-environment configuration.</p>
+        </div>
+        <div class="arch-connector reveal" aria-hidden="true">⇄</div>
+        <div class="arch-card reveal">
+          <span class="arch-tag" data-i18n="arch.client">Clients</span>
+          <h3 data-i18n="arch.client.t">Flutter everywhere</h3>
+          <p data-i18n="arch.client.d">User app and admin app ship independently to web, mobile and desktop, with CI building every release.</p>
+        </div>
+      </div>
+      <div class="arch-chips reveal">
+        <span class="chip">SignalR</span><span class="chip">WebRTC</span>
+        <span class="chip">PostgreSQL</span><span class="chip">JWT</span>
+        <span class="chip">Flutter 3.x</span><span class="chip">Riverpod</span>
+        <span class="chip">Docker</span><span class="chip">Nginx</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 下载 ======================= -->
+  <section class="section section-dark" id="download">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow light" data-i18n="sec.dl.eyebrow">Try it</span>
+        <h2 data-i18n="sec.dl.title">Scan or click to get started</h2>
+        <p class="light-p" data-i18n="sec.dl.sub">The web client runs instantly; mobile clients install in seconds.</p>
+      </div>
+      <div class="download-grid">
+        <a class="dl-card reveal" href="#" data-dl="web">
+          <div class="dl-icon">🌐</div>
+          <h3 data-i18n="dl.web.t">Web</h3>
+          <p data-i18n="dl.web.d">Open in a browser, no install</p>
+        </a>
+        <a class="dl-card reveal" href="#" data-dl="android">
+          <div class="dl-icon">🤖</div>
+          <h3 data-i18n="dl.android.t">Android</h3>
+          <p data-i18n="dl.android.d">Download the APK</p>
+        </a>
+        <a class="dl-card reveal" href="#" data-dl="ios">
+          <div class="dl-icon">🍎</div>
+          <h3 data-i18n="dl.ios.t">iOS</h3>
+          <p data-i18n="dl.ios.d">TestFlight / sideload</p>
+        </a>
+        <a class="dl-card reveal" href="#" data-dl="desktop">
+          <div class="dl-icon">💻</div>
+          <h3 data-i18n="dl.desktop.t">Desktop</h3>
+          <p data-i18n="dl.desktop.d">Windows / macOS</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 定价 ======================= -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="sec.pr.eyebrow">Pricing</span>
+        <h2 data-i18n="sec.pr.title">Pick the plan that fits</h2>
+        <p data-i18n="sec.pr.sub">Pay with USDT — delivery within 24 hours of payment.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- 免费版 -->
+        <article class="price-card reveal">
+          <h3 data-i18n="plan.free.name">Free</h3>
+          <div class="price"><em>$</em><span data-i18n="plan.free.price">0</span><span class="unit" data-i18n="plan.free.unit">/ forever</span></div>
+          <ul class="price-list">
+            <li data-i18n="plan.free.f1">1:1 &amp; group chat, contacts</li>
+            <li data-i18n="plan.free.f2">Images, files &amp; voice messages</li>
+            <li data-i18n="plan.free.f3">Web client only (no Android / iOS)</li>
+            <li class="off" data-i18n="plan.free.f4">No calls, no extensions</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline btn-block" data-i18n="plan.free.btn">Start free</a>
+        </article>
+
+        <!-- 专业版 -->
+        <article class="price-card featured reveal">
+          <span class="price-flag" data-i18n="plan.recommend">Most popular</span>
+          <h3 data-i18n="plan.pro.name">Pro</h3>
+          <div class="price"><em>$</em><span data-i18n="plan.pro.price">1,299</span><span class="unit" data-i18n="plan.pro.unit">USDT / year</span></div>
+          <ul class="price-list">
+            <li data-i18n="plan.pro.f1">Everything in Free</li>
+            <li data-i18n="plan.pro.f2">Audio/video calls &amp; extensions</li>
+            <li data-i18n="plan.pro.f3">Admin console &amp; channels</li>
+            <li data-i18n="plan.pro.f4">All platforms incl. desktop</li>
+            <li data-i18n="plan.pro.f5">Compiled build + 1 year of updates</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-block" data-i18n="plan.pro.btn">Buy with USDT</a>
+        </article>
+
+        <!-- 企业版 -->
+        <article class="price-card reveal">
+          <h3 data-i18n="plan.ent.name">Enterprise</h3>
+          <div class="price"><span data-i18n="plan.ent.price">Custom</span><span class="unit" data-i18n="plan.ent.unit">/ quoted</span></div>
+          <ul class="price-list">
+            <li data-i18n="plan.ent.f1">Everything in Pro</li>
+            <li data-i18n="plan.ent.f2">Full source code, fully customizable</li>
+            <li data-i18n="plan.ent.f3">White-label &amp; custom features</li>
+            <li data-i18n="plan.ent.f4">Deployment support &amp; SLA</li>
+            <li data-i18n="plan.ent.f5">Dedicated solution architect</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline btn-block" data-i18n="plan.ent.btn">Contact sales</a>
+        </article>
+      </div>
+
+      <!-- 付款方式 -->
+      <div class="pay-box reveal">
+        <div class="pay-methods">
+          <span class="pay-label" data-i18n="pay.title">Payment</span>
+          <span class="pay-badge">🪙 <b data-i18n="pay.usdt">USDT (TRC-20 / ERC-20)</b></span>
+        </div>
+        <p data-i18n="pay.note">After you order we send a wallet address and order ID. Once the transfer is confirmed we deliver the installer or repository access within 24 hours, with a receipt on request.</p>
+      </div>
+
+      <!-- 功能对比表 -->
+      <div class="cmp-wrap reveal">
+        <h3 class="cmp-title" data-i18n="cmp.title">Plan comparison</h3>
+        <p class="cmp-sub" data-i18n="cmp.sub">See the differences at a glance.</p>
+        <div class="cmp-scroll">
+          <table class="cmp-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th data-i18n="cmp.col1">Free</th>
+                <th class="hl" data-i18n="cmp.col2">Pro</th>
+                <th data-i18n="cmp.col3">Enterprise</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td data-i18n="cmp.r1">1:1 &amp; group chat, contacts</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+              <tr><td data-i18n="cmp.r2">Images, files &amp; voice messages</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+              <tr><td data-i18n="cmp.r3">Web client</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+              <tr><td data-i18n="cmp.r3m">Android / iOS clients</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+              <tr><td data-i18n="cmp.r4">Audio &amp; video calls</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+              <tr><td data-i18n="cmp.r5">Extensions (mini-apps / plugins)</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+              <tr><td data-i18n="cmp.r6">Admin console &amp; channels</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+              <tr><td data-i18n="cmp.r7">Delivery</td><td data-i18n="cmp.d1">Compiled build</td><td data-i18n="cmp.d2">Compiled build</td><td data-i18n="cmp.d3">Full source</td></tr>
+              <tr><td data-i18n="cmp.r8">Secondary development</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+              <tr><td data-i18n="cmp.r9">Support</td><td data-i18n="cmp.s1">Community</td><td data-i18n="cmp.s2">Ticket support</td><td data-i18n="cmp.s3">Dedicated architect</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= FAQ ======================= -->
+  <section class="section section-alt" id="faq">
+    <div class="container container-narrow">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="sec.faq.eyebrow">FAQ</span>
+        <h2 data-i18n="sec.faq.title">Answers to common questions</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item reveal">
+          <summary data-i18n="faq.q1">Where is my data stored? Is it secure?</summary>
+          <p data-i18n="faq.a1">Everything runs on your own servers. Messages, files and user data live in your own PostgreSQL database and never pass through a third party — you own 100% of your data.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary data-i18n="faq.q2">What are the limits of the Free plan?</summary>
+          <p data-i18n="faq.a2">Free includes full text, image, file and voice messaging plus contacts and group chat. It does not include audio/video calls, extensions (mini-app container, plugins) or the admin console. Upgrade to Pro to unlock them.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary data-i18n="faq.q3">What's the difference between Pro and Enterprise?</summary>
+          <p data-i18n="faq.a3">Pro ships a compiled build you can deploy directly, with calls and extensions enabled. Enterprise adds the complete frontend and backend source code so you can customize freely and white-label the product.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary data-i18n="faq.q4">Can I pay with USDT? How does it work?</summary>
+          <p data-i18n="faq.a4">Yes — USDT on TRC-20 or ERC-20. After you submit your request we provide a wallet address and order ID; once the transfer is confirmed on-chain we deliver within 24 hours and can issue a receipt.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary data-i18n="faq.q5">Which platforms are supported?</summary>
+          <p data-i18n="faq.a5">Web, Android, iOS, Windows and macOS. One Flutter codebase ships to every platform with consistent features, and CI builds each release automatically.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary data-i18n="faq.q6">Is deployment complicated?</summary>
+          <p data-i18n="faq.a6">Not really. The backend is a single ASP.NET Core service plus PostgreSQL (docker compose starts the database in one command), and CI produces the client artifacts, so routine ops work is enough.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 联系 / CTA ======================= -->
+  <section class="section section-cta" id="contact">
+    <div class="container cta-box reveal">
+      <h2 data-i18n="cta.title">Ready to own your own messenger?</h2>
+      <p data-i18n="cta.sub">Leave your details and a specialist will contact you within one business day.</p>
+      <form class="cta-form" id="contactForm" action="#" method="post">
+        <input type="text" name="name" data-i18n-attr="placeholder|cta.name" placeholder="Your name" required />
+        <input type="text" name="email" data-i18n-attr="placeholder|cta.email" placeholder="Email / Telegram" required />
+        <select name="plan" required>
+          <option value="" disabled selected data-i18n="cta.plan">Plan of interest</option>
+          <option data-i18n="plan.free.name">Free</option>
+          <option data-i18n="plan.pro.name">Pro</option>
+          <option data-i18n="plan.ent.name">Enterprise</option>
+        </select>
+        <button type="submit" class="btn btn-primary btn-lg" data-i18n="cta.btn">Get pricing</button>
+      </form>
+      <p class="form-tip" id="formTip"></p>
+    </div>
+  </section>
+
+  <!-- ======================= Footer ======================= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/img/logo.png" alt="" class="brand-logo" />
+        <span>AnyChat</span>
+      </div>
+      <nav class="footer-links">
+        <a href="#features" data-i18n="nav.features">Features</a>
+        <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
+        <a href="docs/index.html" data-i18n="nav.docs">Docs</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#contact" data-i18n="nav.consult">Talk to sales</a>
+      </nav>
+      <p class="copyright" data-i18n="footer.rights">© 2026 AnyChat. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
